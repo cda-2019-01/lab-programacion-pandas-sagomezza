@@ -5,3 +5,16 @@
 ## 
 
 
+import pandas
+import numpy as np
+pandas.set_option('display.notebook_repr_html', False)
+x = pandas.read_csv('tbl0.tsv',  
+                    sep = '\t')
+
+y = pandas.DataFrame()
+
+a = x.groupby('_c1') ['_c2'].apply(list)
+
+y['_c1'] = a.keys()
+y['lista'] = [':'.join(str(z) for z in sorted(elem)) for elem in sorted(a)]
+print(y)

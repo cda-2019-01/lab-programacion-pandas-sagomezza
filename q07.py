@@ -10,3 +10,5 @@ x = pandas.read_csv('tbl0.tsv',
                     decimal = '.')
 x.insert(4, 'suma', x['_c0'] + x['_c2'])
 print(x)
+
+#df0.dtypes   ver los tipos de variables

@@ -12,3 +12,5 @@ y = pandas.read_csv('tbl1.tsv',
 leters = list(sorted(set(y['_c4'])))
 print([(leter.upper()) for leter in leters])
 
+# res = [letter.upper() for letter in df1['_c4].unique()]
+# res = sorted(res)
